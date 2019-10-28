@@ -40,7 +40,6 @@ module.exports = {
       return new Promise((resolve, reject) => {
         conn.query("INSERT INTO users SET username=?, password=?", [data.username, data.hash],
         (err,result) => {
-          console.log(result)
           if(!err) {
             resolve(result)
           } else {
